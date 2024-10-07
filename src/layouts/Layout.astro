@@ -1,0 +1,65 @@
+---
+// es la condifiguración global
+import Header from '../components/Header.astro';
+import Project from '../components/Projects.astro'
+import Contact from '../components/Contact.astro';
+import CvIcon from '../components/icons/CV.astro';
+import '../styles/layouts.css';
+import '@fontsource-variable/onest';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolios</title>
+</head>
+<body>
+    <div class="fixed top-0 z-[-2] h-full w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+    <Header />
+    <div class="pl-4 pr-4 md:pl-24 md:pr-24" id="inicio">
+        <main>
+            <section class= "flex flex-col md:flex-row px-2 text-center md:text-left mt-8 md:mt-20" >
+                <div class="m-5">
+                    <h1 class="text-4xl md:text-7xl font-bold text-red-600 py-7">Hola, soy Mardoqueo Zotelo Florentín</h1>
+                    
+                    <h2 class="text-3xl md:text-6xl font-serif py-1 md:py-6">Licenciado en Análisis de Sistemas Informáticos</h2>
+                    
+                    <div class="flex space-x-4 items-center">
+                        <a href="https://www.linkedin.com/in/mardoqueo-florent%C3%ADn-5926191a7/">
+                            <button id="btnWork" class="bg-transparent hover:bg-green-500 hover:animate-none animate-pulse text-green-500 font-semibold hover:text-white py-2 px-4 border border-green-500 hover:border-transparent rounded m-2">
+                                Disponible para trabajar
+                            </button>
+                        </a>
+                        <a href="href="/MardoqueoZOtelo_CV.pdf" download="MardoqueoZotelo_CV.pdf"" class="text-white text-center animate-bounce hover:animate-none">
+                            <CvIcon class="w-20 h-20"/>
+                            <p class="font-semibold">CV</p>
+                            <span class="sr-only"></span>
+                        </a>
+                    </div>
+                    
+                    
+                    <div class="block md:hidden">
+                        <Contact />
+                    </div>
+                </div>
+                
+                <div class="hidden md:block mt-5 w-[10em] md:w-[25em]">
+                    <img id="avatar" src="/avatar.svg" alt="avatar">
+                    <div class="text-center items-center">
+                        <Contact />
+                    </div>
+                    
+                </div>
+            </section>
+            
+            <section id="proyectos">
+                <Project />
+            </section>
+        </main>
+    </div>
+    
+
+</body>
+</html>
