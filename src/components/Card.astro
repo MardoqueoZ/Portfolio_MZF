@@ -38,9 +38,9 @@ let projects = [
     {
         title: "WORDLE - CON API",
         description: "Wordle es un juego de adivinar palabras, que tiene un formato de crucigrama y con similitudes con otros juegos como el Mastermind. En él, tienes que adivinar una palabra en seis intentos, en los que no se te dan más pistas que decirte qué letras de las que has puesto están dentro de la palabra.",
-        image: "/CalculadoraBasal.jpg",
-        link1: "https://github.com/MardoqueoZ/Calculadora-Basal",
-        link2: "https://mardoqueoz.github.io/Calculadora-Basal/",
+        image: "/wordle.jpg",
+        link1: "https://github.com/MardoqueoZ/wordle_ppy",
+        link2: "https://mardoqueoz.github.io/wordle_ppy/",
         tags: [TAGS.JS, TAGS.CSS, TAGS.HTML] 
     }
 ]
@@ -52,17 +52,17 @@ let projects = [
     projects.map(project => (
         <div class="flex flex-col md:flex-row items-start bg-gray-900 p-6 rounded-2xl shadow-lg mb-3">
             <div class="max-w-sm rounded-2xl overflow-hidden">
-                <img class="w-full" src={project.image} alt="{project.title}">
+                <img class="w-full hover:transform transition-transform duration-300 hover:scale-105" src={project.image} alt="{project.title}">
                 <div class="px-6 py-4 mx-5">
                     <div class="flex justify-center space-x-4 gap-x-10">
-                        <div>
+                        <div class="hover:transform transition-transform duration-300 hover:scale-105">
                             <a href={project.link1} title="GitHub" class="text-white">
                                 <GitHubIcon />
                             </a>
                             <p class="text-gray-400 mt-1">GitHub</p>
                         </div>
                         
-                        <div>
+                        <div class="hover:transform transition-transform duration-300 hover:scale-105">
                             <a href={project.link2} title="Web" class="text-white">
                                 <WebSiteIcon />
                                 
@@ -74,7 +74,7 @@ let projects = [
             </div>
             
             <div class="md:ml-6 mt-4 md:mt-0 flex-1">
-                <h2 class="text-3xl md:text-4xl py-4 text-white">{project.title}</h2>
+                <h2 class="text-2xl md:text-4xl py-4 text-white">{project.title}</h2>
                 <p class="text-xl text-gray-300 line-clamp-2 md:line-clamp-3 hover:line-clamp-none" id="desc">{project.description}</p>
                 
                 <div class="mt-4">

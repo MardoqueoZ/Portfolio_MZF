@@ -1,0 +1,33 @@
+---
+import CvIcon from '../components/icons/CV.astro';
+import Contact from '../components/Contact.astro';
+---
+
+<div class="m-5">
+    <h1 class="text-4xl md:text-7xl font-bold text-red-600 py-7">Hola, soy Mardoqueo Zotelo Florentín</h1>
+    
+    <h2 class="text-3xl md:text-6xl font-serif py-1 md:py-6">Licenciado en Análisis de Sistemas Informáticos</h2>
+    
+    <div class="flex space-x-4 items-center">
+        <span class="bg-green-100 text-green-500 font-medium me-2 px-2.5 py-0.5 rounded-2xl dark:bg-green-900 dark:text-green-300 text-2xl p-8 animate-pulse">Disponible para Trabajar</span>
+        
+        <a href="href="/MardoqueoZOtelo_CV.pdf" download="MardoqueoZotelo_CV.pdf"" class="text-white text-center animate-pulse hover:animate-none hover:transform transition-transform duration-300 hover:scale-105">
+            <CvIcon class="w-20 h-20"/>
+            <p class="font-semibold">CV</p>
+            <span class="sr-only"></span>
+        </a>
+    </div>
+    
+    
+    <div class="block md:hidden">
+        <Contact />
+    </div>
+</div>
+
+<div class="hidden md:block mt-5 w-[10em] md:w-[25em]">
+    <img id="avatar" src="/avatar.svg" alt="avatar">
+    <div class="text-center items-center">
+        <Contact />
+    </div>
+    
+</div>

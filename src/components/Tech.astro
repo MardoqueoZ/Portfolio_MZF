@@ -1,0 +1,50 @@
+---
+let TECHS = [
+    {
+        title: "HTML5",
+        src: "/tech/html5.svg",
+        class: "max-w-sm rounded overflow-hidden shadow-lg bg-gray-900 p-4 text-center transform transition-transform duration-300 hover:scale-105" 
+    },
+    
+    {
+        title: "CSS",
+        src: "/tech/css.svg",
+        class: "max-w-sm rounded overflow-hidden shadow-lg bg-gray-900 p-4 text-center transform transition-transform duration-300 hover:scale-105" 
+    },
+    
+    {
+        title: "JavaScript",
+        src: "/tech/javascript.svg",
+        class: "max-w-sm rounded overflow-hidden shadow-lg bg-gray-900 p-4 text-center transform transition-transform duration-300 hover:scale-105" 
+    },
+    
+    {
+        title: "Tailwind CSS",
+        src: "/tech/tailwindcss.svg",
+        class: "max-w-sm rounded overflow-hidden shadow-lg bg-gray-900 p-4 text-center transform transition-transform duration-300 hover:scale-105" 
+    },
+    
+    {
+        title: "Python",
+        src: "/tech/python.svg",
+        class: "max-w-sm rounded overflow-hidden shadow-lg bg-gray-900 p-4 text-center transform transition-transform duration-300 hover:scale-105" 
+    }
+]
+---
+
+
+<div class="flex flex-col px-2 text-center md:text-left mt-6 md:mt-15 m-5 gap-y-6">
+    <h1 class="text-4xl md:text-7xl font-bold text-red-600 py-7">Tecnologías</h1>
+    
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {
+            TECHS.map(tech => (
+                <div class={tech.class}>
+                <img src={tech.src} alt="HTML5" class="w-16 h-16 mx-auto"/>
+                <div class="mt-4 text-white">{tech.title}</div>
+            </div>
+            ))
+        }
+        
+    </div>
+</div>
