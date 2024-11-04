@@ -19,26 +19,26 @@ import AboutMe from '../components/AboutMe.astro';
 <body>
     <div class="fixed top-0 z-[-2] h-full w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
     <Header />
-    <div class="ml-1 mr-1 md:ml-[20em] md:mr-[20em]" id="inicio">
+    <div class="ml-1 mr-1 md:ml-[20em] md:mr-[20em]" >
         <main>
-            <section class= "flex flex-col md:flex-row px-2 text-center md:text-left mt-8 md:mt-20" >
+            <section class= "scroll-m-20 md:scroll-m-4 flex flex-col md:flex-row px-2 text-center md:text-left mt-8 md:mt-20" id="inicio">
                 <Hero />
             </section>
             
-            <section id="proyectos">
+            <section id="proyectos" class="scroll-m-20 md:scroll-m-4">
                 <Project />
             </section>
             
-            <section id="tecnologias">
+            <section id="tecnologias" class="scroll-m-20 md:scroll-m-4">
                 <Tech />
             </section>
             
-            <section id="sobreMi">
+            <section id="sobreMi" class="scroll-m-20 md:scroll-m-4">
                 <AboutMe />
             </section>
             
             
-            <footer class="text-white py-6">
+            <footer class="text-white py-6 md:scroll-m-0">
                 <div class="container mx-auto px-4">
                     <hr class="my-4 border-red-600">
                     <div class="text-center">
