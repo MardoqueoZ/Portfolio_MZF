@@ -3,6 +3,7 @@ import Hero from '../components/Hero.astro';
 import Header from '../components/Header.astro';
 import Project from '../components/Projects.astro'
 import Tech from '../components/Tech.astro';
+import Footer from '../components/Footer.astro'
 import '../styles/layouts.css';
 import '@fontsource-variable/onest';
 import AboutMe from '../components/AboutMe.astro';
@@ -17,37 +18,30 @@ import AboutMe from '../components/AboutMe.astro';
     <title>Portafolios</title>
 </head>
 <body>
-    <div class="fixed top-0 z-[-2] h-full w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
     <Header />
-    <div class="ml-1 mr-1 md:ml-[15em] md:mr-[15em]" >
-        <main>
-            <section class= "scroll-m-20 md:scroll-m-4 flex flex-col md:flex-row px-2 text-center md:text-left mt-8 md:mt-20" id="inicio">
-                <Hero />
-            </section>
-            
-            <section id="proyectos" class="scroll-m-20 md:scroll-m-4">
-                <Project />
-            </section>
-            
-            <section id="tecnologias" class="scroll-m-20 md:scroll-m-4">
-                <Tech />
-            </section>
-            
-            <section id="sobreMi" class="scroll-m-20 md:scroll-m-4">
-                <AboutMe />
-            </section>
-            
-            
-            <footer class="text-white py-6 md:scroll-m-0">
-                <div class="container mx-auto px-4">
-                    <hr class="my-4 border-red-600">
-                    <div class="text-center">
-                        <p>&copy; 2024 Mardoqueo Zotelo Florentín. Todos los derechos reservados.</p>
-                    </div>
-                </div>
-            </footer>
-            
-        </main>
+    <div class="relative h-full w-full dark:bg-slate-950"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+        <div class="ml-1 mr-1 md:ml-[15em] md:mr-[15em]" >
+            <main>
+                <section class= "scroll-m-20 md:scroll-m-4 flex flex-col md:flex-row px-2 text-center md:text-left mt-8 md:mt-20" id="inicio">
+                    <Hero />
+                </section>
+                
+                <section id="proyectos" class="scroll-m-20 md:scroll-m-4">
+                    <Project />
+                </section>
+                
+                <section id="tecnologias" class="scroll-m-20 md:scroll-m-4">
+                    <Tech />
+                </section>
+                
+                <section id="sobreMi" class="scroll-m-20 md:scroll-m-4">
+                    <AboutMe />
+                </section>
+                
+                <Footer />
+                
+            </main>
+        </div>
     </div>
     
 
