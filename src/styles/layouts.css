@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro&family=Libre+Baskerville');
+
+
 body {
-    display: flex;
-    flex-direction: column;
-    color: aliceblue;
-    justify-content: center;
+    font-family: 'Libre Baskerville', sans-serif;
 }
 
 h1 {
-    font-family: 'Onest Variable', sans-serif;
+    font-family: 'Jaro', sans-serif;
+}
+
+h2 {
+    font-family: 'Libre Baskerville', sans-serif;
+    
 }
 

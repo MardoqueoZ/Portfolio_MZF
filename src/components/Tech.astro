@@ -1,80 +1,89 @@
 ---
+import TechIcon from "./icons/TechIcon.astro";
+import Html from "./icons/tech/html.astro";
+import Css from "./icons/tech/css.astro";
+import Js from "./icons/tech/js.astro";
+import Python from "./icons/tech/python.astro";
+import Django from "./icons/tech/django.astro";
+import React from "./icons/tech/react.astro";
+import Tailwind from "./icons/tech/tailwind.astro";
+import Bootstrap from './icons/tech/bootstrap.astro';
+import PostgreSql from "./icons/tech/postgresql.astro";
+import MySql from './icons/tech/mysql.astro';
+
 let TECHS = [
     {
         title: "HTML5",
-        src: "/tech/html5.svg",
-        class: "max-w-sm rounded overflow-hidden shadow-lg dark:bg-gray-800 bg-gray-100 p-4 text-center transform transition-transform duration-300 hover:scale-105" 
+        icon: Html,
     },
     
     {
         title: "CSS",
-        src: "/tech/css.svg",
-        class: "max-w-sm rounded overflow-hidden shadow-lg dark:bg-gray-800 bg-gray-100 p-4 text-center transform transition-transform duration-300 hover:scale-105" 
+        icon: Css,
     },
     
     {
         title: "JavaScript",
-        src: "/tech/javascript.svg",
-        class: "max-w-sm rounded overflow-hidden shadow-lg dark:bg-gray-800 bg-gray-100 p-4 text-center transform transition-transform duration-300 hover:scale-105" 
+        icon: Js,
     },
     
     {
         title: "Python",
-        src: "/tech/python.svg",
-        class: "max-w-sm rounded overflow-hidden dark:shadow-lg dark:bg-gray-800 bg-gray-100 p-4 text-center transform transition-transform duration-300 hover:scale-105" 
+        icon: Python,
     },
     
     {
         title: "Django",
-        src: "/tech/django.svg",
-        class: "max-w-sm rounded overflow-hidden dark:shadow-lg dark:bg-gray-800 bg-gray-100 p-4 text-center transform transition-transform duration-300 hover:scale-105" 
+        icon: Django,
     },
     
     {
         title: "React.JS",
-        src: "/tech/react.svg",
-        class: "max-w-sm rounded overflow-hidden dark:shadow-lg dark:bg-gray-800 bg-gray-100 p-4 text-center transform transition-transform duration-300 hover:scale-105" 
+        icon: React,
     },
     
     {
         title: "Tailwind CSS",
-        src: "/tech/tailwindcss.svg",
-        class: "max-w-sm rounded overflow-hidden shadow-lg dark:bg-gray-800 bg-gray-100 p-4 text-center transform transition-transform duration-300 hover:scale-105" 
+        icon: Tailwind,
     },
     
     {
         title: "Bootstrap",
-        src: "/tech/bootstrap.svg",
-        class: "max-w-sm rounded overflow-hidden shadow-lg dark:bg-gray-800 bg-gray-100 p-4 text-center transform transition-transform duration-300 hover:scale-105" 
+        icon: Bootstrap,
     },
     
     {
         title: "PostgreSQL",
-        src: "/tech/postgresql.svg",
-        class: "max-w-sm rounded overflow-hidden shadow-lg dark:bg-gray-800 bg-gray-100 p-4 text-center transform transition-transform duration-300 hover:scale-105" 
+        icon: PostgreSql,
     },
     
     {
         title: "MySQL",
-        src: "/tech/mysql.svg",
-        class: "max-w-sm rounded overflow-hidden shadow-lg dark:bg-gray-800 bg-gray-100 p-4 text-center transform transition-transform duration-300 hover:scale-105" 
+        icon: MySql,
     },
 ]
 ---
 
 
 <div class="flex flex-col px-2 text-center md:text-left mt-6 md:mt-15 m-5 gap-y-6">
-    <h1 class="text-2xl md:text-5xl font-bold text-blue-900 dark:text-blue-500">Tecnologías</h1>
+    <div class="flex items-center text-2xl md:text-5xl font-bold text-blue-900 dark:text-blue-500">
+        <i class="mr-2">
+            <TechIcon class="size-6 md:size-12" />
+        </i>
+        <h1>Tecnologías</h1>
+    </div>
     
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         {
-            TECHS.map(tech => (
-                <div class={tech.class}>
-                <img src={tech.src} class="w-16 h-16 mx-auto"/>
-                <div class="mt-4 text-black dark:text-white">{tech.title}</div>
+          TECHS.map(tech => (
+            <div class="flex flex-col items-center max-w-sm rounded overflow-hidden shadow-lg dark:bg-gray-800 bg-gray-100 p-4 text-center transform transition-transform duration-300 hover:scale-105">
+              <span class="flex flex-col items-center justify-center text-black dark:text-white">
+                <tech.icon class="size-24" />
+                {tech.title}
+              </span>
             </div>
-            ))
+          ))
         }
-        
     </div>
+      
 </div>

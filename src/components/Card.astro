@@ -4,38 +4,71 @@ import WebSiteIcon from "./icons/WebSite.astro";
 import JS from "./icons/tech/js.astro";
 import CSS from "./icons/tech/css.astro";
 import HTML from "./icons/tech/html.astro";
+import Python from "./icons/tech/python.astro";
+import Django from "./icons/tech/django.astro";
+import React from "./icons/tech/react.astro";
+import Tailwind from "./icons/tech/tailwind.astro";
 
 const TAGS = {
     HTML: {
         name: "HTML",
-        class: "bg-red-300 text-white text-sm md:text-xl font-medium px-2.5 py-0.5 rounded-full dark:bg-red-400 dark:text-white",
+        class: "bg-red-400 text-white font-medium px-2.5 py-0.5 rounded-full",
         icon: HTML
     },
     CSS: {
         name: "CSS",
-        class: "bg-blue-300 text-white text-sm md:text-xl font-medium px-2.5 py-0.5 rounded-full dark:bg-blue-500 dark:text-white",
+        class: "bg-blue-500 text-white font-medium px-2.5 py-0.5 rounded-full",
         icon: CSS
     },
     JS: {
         name: "JavaScript",
-        class: "bg-yellow-300 text-white text-sm md:text-xl font-medium px-2.5 py-0.5 rounded-full dark:bg-yellow-500 dark:text-white",
-        icon: JS
+        class: "bg-yellow-300 text-white font-medium px-2.5 py-0.5 rounded-full",
+        icon: JS,
+    },
+    Python: {
+        name: "Python",
+        class: "bg-yellow-600 text-white font-medium px-2.5 py-0.5 rounded-full",
+        icon: Python,
+    },
+    Django: {
+        name: "Django",
+        class: "bg-green-400 text-white font-medium px-2.5 py-0.5 rounded-full",
+        icon: Django,
+    },
+    React: {
+        name: "React.JS",
+        class: "bg-blue-500 text-white font-medium px-2.5 py-0.5 rounded-full",
+        icon: React,
+    },
+    Tailwind: {
+        name: "Tailwind",
+        class: "bg-blue-900 text-white font-medium px-2.5 py-0.5 rounded-full",
+        icon: Tailwind,
     }
 };
 
 let projects = [
     {
-        title: "CALCULADORA BASAL",
+        title: "Fan Page de Harry Potter",
+        description: "Pequeña Fan Page de la Saga Harry Potter que muestra información básica sobre la saga y la autora. De la misma forma, se tiene una pestaña con los personajes principales, obtenidos al consumir una api usando await fetch en React.js. Cabe destacar que la página fue desarrollada con React, implementando rutas y cambios de idioma entre el Español y el Inglés.",
+        image: "/projects/harryPotter.webp",
+        link1: "https://github.com/MardoqueoZ/react-hpotter",
+        link2: "https://hp-fanpage.netlify.app/",
+        tags: [TAGS.React, TAGS.Tailwind]
+    },
+    
+    {
+        title: "Calculadora Basal",
         description: "Pequeña interfaz que permite el cálculo de la Tasa metabólica Basal. Que es la cantidad mínima de energía que necesita tu cuerpo para sobrevivir realizando las funciones básicas, tales como respirar, parpadear, filtrar la sangre, regular la temperatura del cuerpo o sintetizar hormonas.",
-        image: "/CalculadoraBasal.jpg",
+        image: "/projects/CalculadoraBasal.jpg",
         link1: "https://github.com/MardoqueoZ/Calculadora-Basal",
         link2: "https://mardoqueoz.github.io/Calculadora-Basal/",
         tags: [TAGS.JS, TAGS.CSS, TAGS.HTML]
     },
     {
-        title: "WORDLE - CON API",
+        title: "Wordle",
         description: "Wordle es un juego de adivinar palabras, que tiene un formato de crucigrama y con similitudes con otros juegos como el Mastermind. En él, tienes que adivinar una palabra en seis intentos, en los que no se te dan más pistas que decirte qué letras de las que has puesto están dentro de la palabra.",
-        image: "/wordle.jpg",
+        image: "/projects/wordle.jpg",
         link1: "https://github.com/MardoqueoZ/wordle_ppy",
         link2: "https://mardoqueoz.github.io/wordle_ppy/",
         tags: [TAGS.JS, TAGS.CSS, TAGS.HTML]
@@ -44,12 +77,12 @@ let projects = [
 ---
 
 {projects.map(project => (
-    <div class="flex flex-col md:flex-row items-start dark:bg-gray-800 bg-gray-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 mb-6">
+    <div class="flex flex-col md:flex-row items-start dark:bg-gray-800 bg-gray-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 mb-6 transform hover:scale-105">
         
         {/* Contenedor de la imagen con altura completa */}
         <div class="relative w-full md:w-1/2 max-w-sm rounded-2xl overflow-hidden h-full">
             {/* Imagen ajustada para cubrir todo el contenedor */}
-            <img class="w-full h-full object-cover rounded-lg hover:scale-105 transform transition-transform duration-300" src={project.image} alt={project.title} />
+            <img class="w-full h-72 object-cover rounded-lg hover:scale-105 transform transition-transform duration-300" src={project.image} alt={project.title} />
             
             {/* Botones sobre la imagen */}
             <div class="absolute inset-0 flex items-center justify-center gap-4 opacity-0 hover:opacity-100 transition-opacity duration-300 bg-white dark:bg-black bg-opacity-50 dark:bg-opacity-50">
@@ -69,14 +102,15 @@ let projects = [
             <h2 class="text-2xl md:text-4xl font-semibold text-black dark:text-white mb-3">{project.title}</h2>
             <p class="text-lg text-black dark:text-white line-clamp-2 md:line-clamp-none hover:line-clamp-none transition-all duration-300">{project.description}</p>
             
-            <div class="mt-4">
-                <ul class="flex flex-wrap gap-3 justify-center">
+            <div class="flex flex-wrap mt-2  justify-center md:justify-start">
+                <ul class="flex flex-row mb-2 gap-x-2">
                     {project.tags.map(tag => (
-                        <li class={tag.class}>
-                            <i class="flex items-center justify-center space-x-2">
-                                <tag.icon class="w-5 h-5 md:w-6 md:h-6"/>
-                                <span class="hidden md:inline">{tag.name}</span>
-                            </i>
+                        <li >
+                            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                                <tag.icon class="size-4" />
+                                {tag.name}
+                            </span>
+                            
                         </li>
                     ))}
                 </ul>
