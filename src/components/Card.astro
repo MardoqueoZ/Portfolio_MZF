@@ -8,6 +8,8 @@ import Python from "./icons/tech/python.astro";
 import Django from "./icons/tech/django.astro";
 import React from "./icons/tech/react.astro";
 import Tailwind from "./icons/tech/tailwind.astro";
+import Bootstrap from "./icons/tech/bootstrap.astro";
+import Postgresql from "./icons/tech/postgresql.astro";
 
 const TAGS = {
     HTML: {
@@ -44,10 +46,29 @@ const TAGS = {
         name: "Tailwind",
         class: "bg-blue-900 text-white font-medium px-2.5 py-0.5 rounded-full",
         icon: Tailwind,
+    },
+    Bootstrap: {
+        name: "Bootstrap",
+        class: "bg-purple-500 text-white font-medium px-2.5 py-0.5 rounded-full",
+        icon: Bootstrap,
+    },
+    Postgresql: {
+        name: "PostgreSQL",
+        class: "bg-blue-500 text-white font-medium px-2.5 py-0.5 rounded-full",
+        icon: Postgresql,
     }
 };
 
 let projects = [
+    {
+        title: "Aplicación web para el registro de mascotas: vacunaciones, consultas y tratamientos",
+        description: "Este proyecto fue desarrollado como mi Trabajo Final de Grado. Utilicé Django como framework de desarrollo y PostgreSQL como base de datos. La aplicación permite el registro de mascotas, vacunaciones, consultas y tratamientos. Además, consta de apis desarrolladas con Django Rest Framework para la comunicación con una aplicación móvil desarrollada en Flutter.",
+        image: "/projects/tesis.png",
+        link1: "https://github.com/MardoqueoZ/tfg_admin",
+        link2: "#",
+        tags: [TAGS.Python, TAGS.Django, TAGS.Bootstrap, TAGS.Postgresql]
+    },
+    
     {
         title: "Fan Page de Harry Potter",
         description: "Pequeña Fan Page de la Saga Harry Potter que muestra información básica sobre la saga y la autora. De la misma forma, se tiene una pestaña con los personajes principales, obtenidos al consumir una api usando await fetch en React.js. Cabe destacar que la página fue desarrollada con React, implementando rutas y cambios de idioma entre el Español y el Inglés.",
@@ -65,14 +86,7 @@ let projects = [
         link2: "https://mardoqueoz.github.io/Calculadora-Basal/",
         tags: [TAGS.JS, TAGS.CSS, TAGS.HTML]
     },
-    {
-        title: "Wordle",
-        description: "Wordle es un juego de adivinar palabras, que tiene un formato de crucigrama y con similitudes con otros juegos como el Mastermind. En él, tienes que adivinar una palabra en seis intentos, en los que no se te dan más pistas que decirte qué letras de las que has puesto están dentro de la palabra.",
-        image: "/projects/wordle.jpg",
-        link1: "https://github.com/MardoqueoZ/wordle_ppy",
-        link2: "https://mardoqueoz.github.io/wordle_ppy/",
-        tags: [TAGS.JS, TAGS.CSS, TAGS.HTML]
-    }
+
 ];
 ---
 
