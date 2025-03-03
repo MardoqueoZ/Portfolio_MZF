@@ -165,11 +165,11 @@ const $$Card = createComponent(async ($$result, $$props, $$slots) => {
   };
   let projects = [
     {
-      title: "Aplicaci\xF3n web para el registro de mascotas: vacunaciones, consultas y tratamientos",
-      description: "Este proyecto fue desarrollado como mi Trabajo Final de Grado. Utilic\xE9 Django como framework de desarrollo y PostgreSQL como base de datos. La aplicaci\xF3n permite el registro de mascotas, vacunaciones, consultas y tratamientos. Adem\xE1s, consta de apis desarrolladas con Django Rest Framework para la comunicaci\xF3n con una aplicaci\xF3n m\xF3vil desarrollada en Flutter.",
+      title: "Aplicaci\xF3n web para el registro de mascotas.",
+      description: "Este proyecto fue desarrollado como mi Trabajo Final de Grado. Utilic\xE9 Django como framework de desarrollo y PostgreSQL como base de datos. La aplicaci\xF3n permite el registro de mascotas, vacunaciones, consultas y tratamientos. Adem\xE1s, consta de apis desarrolladas con Django Rest Framework para la comunicaci\xF3n con una aplicaci\xF3n m\xF3vil desarrollada en Flutter. Obs.: utilic\xE9 un servicio de deploy gratuito para la aplicaci\xF3n web, por lo que puede tardar unos segundos en cargar la p\xE1gina. Credenciales: usuario: admin, contrase\xF1a: admin123.",
       image: "/projects/tesis.png",
       link1: "https://github.com/MardoqueoZ/tfg_admin",
-      link2: "#",
+      link2: "https://tfg-admin.onrender.com",
       tags: [TAGS.Python, TAGS.Django, TAGS.Bootstrap, TAGS.Postgresql]
     },
     {
