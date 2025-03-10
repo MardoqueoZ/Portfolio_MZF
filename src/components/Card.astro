@@ -116,20 +116,19 @@ let projects = [
             <h2 class="text-2xl md:text-4xl font-semibold text-black dark:text-white mb-3">{project.title}</h2>
             <p class="text-lg text-black dark:text-white line-clamp-2 md:line-clamp-none hover:line-clamp-none transition-all duration-300">{project.description}</p>
             
-            <div class="flex flex-wrap mt-2  justify-center md:justify-start">
-                <ul class="flex flex-row mb-2 gap-x-2">
+            <div class="flex flex-wrap mt-2 justify-center md:justify-start">
+                <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
                     {project.tags.map(tag => (
-                        <li >
-                            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
-                                <tag.icon class="size-4" />
+                        <li>
+                            <span class={`flex items-center gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                                <tag.icon class="w-4 h-4" />
                                 {tag.name}
                             </span>
-                            
                         </li>
                     ))}
                 </ul>
             </div>
-
+            
         </div>
     </div>
 ))}
